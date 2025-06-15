@@ -7,7 +7,6 @@
         "v3": "*"
     },
     "files": [
-        "main.blocks",
         "main.ts",
         "sendBuffer.asm",
         "setBufferMode.asm",
