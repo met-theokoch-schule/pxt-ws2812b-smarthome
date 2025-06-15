@@ -1,24 +1,47 @@
+# ws2812
 
-> Diese Seite bei [https://met-theokoch-schule.github.io/pxt-ws2812b-smarthome/](https://met-theokoch-schule.github.io/pxt-ws2812b-smarthome/) öffnen
+A driver for WS2812B programmable LEDs in MakeCode.
 
-## Als Erweiterung verwenden
+## Usage
 
-Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
+### sendBuffer
 
-* öffne [https://makecode.calliope.cc/](https://makecode.calliope.cc/)
-* klicke auf **Neues Projekt**
-* klicke auf **Erweiterungen** unter dem Zahnrad-Menü
-* nach **https://github.com/met-theokoch-schule/pxt-ws2812b-smarthome** suchen und importieren
+The package exposes ``ws2812b.sendBuffer`` that bit-bangs a color buffer for WS2812B LEDs over a pin.
 
-## Dieses Projekt bearbeiten
+See https://github.com/microsoft/pxt-neopixel for an example of usage.
 
-Um dieses Repository in MakeCode zu bearbeiten.
+### setBufferMode
 
-* öffne [https://makecode.calliope.cc/](https://makecode.calliope.cc/)
-* klicke auf **Importieren** und dann auf **Importiere URL**
-* füge **https://github.com/met-theokoch-schule/pxt-ws2812b-smarthome** ein und klicke auf Importieren
+This function allows to specify the color layout in the buffer.
 
-#### Metadaten (verwendet für Suche, Rendering)
+```
+#define LIGHTMODE_RGB 1
+#define LIGHTMODE_RGBW 2
+#define LIGHTMODE_RGB_RGB 3
+```
 
-* for PXT/calliopemini
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+## ~ hint
+ 
+**Bluetooth disabled**: This package disables BLE as the real time requirements of the WS2812 conflict with the BLE stack.
+
+## ~
+
+## Simulator support
+
+The ``sendBuffer`` function is supported by the micro:bit simulator!
+
+## License
+
+MIT
+
+## Supported targets
+
+* for PXT/microbit
+* for PXT/calliope
+
+(The metadata above is needed for package search.)
+
+
+## Code of Conduct
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
