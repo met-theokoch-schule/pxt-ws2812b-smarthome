@@ -1,0 +1,27 @@
+{
+    "name": "ws2812b-smarthome",
+    "version": "0.1.1",
+    "description": "A driver for WS2812B programmable LEDs in MakeCode",
+    "dependencies": {
+        "core": "*",
+        "v3": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "sendBuffer.asm",
+        "setBufferMode.asm",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "7.0.3",
+        "targetId": "calliopemini"
+    },
+    "supportedTargets": [
+        "calliopemini"
+    ],
+    "preferredEditor": "tsprj"
+}
